@@ -15,7 +15,7 @@ data.cvg <- data.cvg %>%
     mutate(ValuParkUtilization=100-ValuParkUtilization) %>%
     mutate(Day=format(Date,'%a'))
 
-data.cvg$Day <- factor(data.cvg$Day,levels = c('Mon','Tue','Wed','Thr','Fri','Sat','Sun'),ordered = T)
+data.cvg$Day <- factor(data.cvg$Day,levels = c('Sat','Sun','Mon','Tue','Wed','Thu','Fri'),ordered = T)
 
 data.cvg <- data.cvg %>% mutate(Time=as.POSIXct(format(Date, format = "%H:%M:%S"), format = "%H:%M:%S"))
 
